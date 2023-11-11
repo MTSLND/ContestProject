@@ -2,5 +2,26 @@
 {% block title %} Changed {% endblock%}
 
 {% block content %}
-<h1>This is The Home Page</h1>
+<div class="container mt-4">
+    <form method="POST">
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="grupo" id="grupo1" value="grupo1">
+            <label class="form-check-label" for="grupo1">Grupo 1</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="grupo" id="grupo2" value="grupo2">
+            <label class="form-check-label" for="grupo2">Grupo 2</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="grupo" id="grupo3" value="grupo3">
+            <label class="form-check-label" for="grupo3">Grupo 3</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="grupo" id="grupo4" value="grupo4">
+            <label class="form-check-label" for="grupo4">Grupo 4</label>
+        </div>
+        <br/>
+        <button type="submit" class="btn btn-primary">Enviar Voto</button>
+    </form>
+</div>
 {% endblock %}
