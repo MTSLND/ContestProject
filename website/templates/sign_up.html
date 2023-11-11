@@ -1,9 +1,9 @@
 {% extends "base.html" %} 
-{% block title %} Sign Up {% endblock%}
+{% block title %} Votar {% endblock%}
 
 {% block content %}
 <form method="POST">
-    <h3 align="center">Sign Up</h3>
+    <h3 align="center">Votar</h3>
     <div class="form-group">
         <label for="email">Email</label>
         <input 
@@ -11,20 +11,20 @@
         class="form-control" 
         id="email" 
         name="email" 
-        placeholder="Enter Email"
+        placeholder="Inserir Email"
         />
     </div>
     <div class="form-group">
-        <label for="text">First Name</label>
+        <label for="text">Nome</label>
         <input 
         type="text" 
         class="form-control" 
         id="firstName" 
         name="firstName" 
-        placeholder="Enter First Name"
+        placeholder="Inserir Nome"
         />
     </div>
     <br>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Entrar</button>
 </form>
 {% endblock %}
