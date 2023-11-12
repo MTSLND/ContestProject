@@ -13,7 +13,7 @@ def home():
         grupo = request.form.get('grupo')
         voto = Votos.query.filter_by(user_id=current_user.id).first()
         if voto:
-            flash('Somente um Voto Permitido Pessoa', 'error')
+            flash('Somente um Voto Permitido por Pessoa', 'error')
             return redirect(url_for('views.votacao'))
         elif grupo == 'grupo1':
             voto = 1
