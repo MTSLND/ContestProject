@@ -14,7 +14,7 @@ def home():
         voto = Votos.query.filter_by(user_id=current_user.id).first()
         if voto:
             flash('Somente um Voto Permitido Pessoa', 'error')
-            return redirect(url_for('views.home'))
+            return redirect(url_for('views.votacao'))
         elif grupo == 'grupo1':
             voto = 1
         elif grupo == 'grupo2':
@@ -31,6 +31,7 @@ def home():
         db.session.add(new_voto)
         db.session.commit()
         flash('Voto Contabilizado com Sucesso', 'success')
+        return redirect(url_for('views.votacao'))
 
     return render_template("home.html", user=current_user)
 
