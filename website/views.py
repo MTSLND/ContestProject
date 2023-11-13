@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, flash, redirect, url_for
+from flask import Blueprint, render_template, request, flash, redirect, url_for, make_response
 from flask_login import login_required, current_user
 from .models import User, Votos
 from sqlalchemy.sql import func
@@ -11,8 +11,14 @@ views = Blueprint('views',__name__)
 def home():
     if request.method == 'POST':
         grupo = request.form.get('grupo')
+
+        if 'votou' in request.cookies:
+            #Verifica nos cookies se a pessoa já votou
+            flash('Você já votou. Somente um voto permitido por pessoa.', 'error')
+            return redirect(url_for('views.resultado'))
         voto = Votos.query.filter_by(user_id=current_user.id).first()
         if voto:
+            #Verifica pelo email se a pessoa ja votou
             flash('Somente um Voto Permitido por Pessoa', 'error')
             return redirect(url_for('views.resultado'))
         elif grupo == 'grupo1':
@@ -30,8 +36,11 @@ def home():
         new_voto = Votos(grupo=voto, user_id=current_user.id)
         db.session.add(new_voto)
         db.session.commit()
-        flash('Voto Contabilizado com Sucesso', 'success')
-        return redirect(url_for('views.resultado'))
+
+        response = make_response(redirect(url_for('views.resultado')))
+        response.set_cookie('votou', '1')
+
+        return response
 
     return render_template("home.html", user=current_user)
 

@@ -38,7 +38,7 @@ main{
 
 .container-form{
 
-  background-color: rgba(238, 118, 6, 0.651);
+  background-color: rgba(238, 118, 6, 0.753);
   border-style: solid;
   border-width: 0.15rem;
   padding: 5rem;
@@ -70,10 +70,10 @@ main{
 }
 
 #button-entrar {
-  background-color: rgb(255, 255, 255); 
+  background-color: rgba(238, 118, 6, 0.651);
   border-color: rgb(255, 255, 255);
   border-width: 1px;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 
@@ -344,7 +344,7 @@ display: flex;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%; /* Largura total */
+  width: 100%;
   background-color: var(--main-color);
   color: white;
   display: flex;
