@@ -14,7 +14,7 @@ def home():
         voto = Votos.query.filter_by(user_id=current_user.id).first()
         if voto:
             flash('Somente um Voto Permitido por Pessoa', 'error')
-            return redirect(url_for('views.votacao'))
+            return redirect(url_for('views.resultado'))
         elif grupo == 'grupo1':
             voto = 1
         elif grupo == 'grupo2':
@@ -31,15 +31,15 @@ def home():
         db.session.add(new_voto)
         db.session.commit()
         flash('Voto Contabilizado com Sucesso', 'success')
-        return redirect(url_for('views.votacao'))
+        return redirect(url_for('views.resultado'))
 
     return render_template("home.html", user=current_user)
 
-@views.route('/votacao')
-def votacao():
+@views.route('/resultado')
+def resultado():
     
     total_votos = Votos.query.count()
     contagem_por_grupo = Votos.query.with_entities(Votos.grupo, func.count().label('count')).group_by(Votos.grupo).all()
     usuarios = User.query.all()
-
-    return render_template("votacao.html", user=current_user, total_votos=total_votos, contagem_por_grupo=contagem_por_grupo)
+    
+    return render_template("resultado.html", user=current_user, total_votos=total_votos, contagem_por_grupo=contagem_por_grupo)

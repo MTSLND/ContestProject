@@ -1,30 +1,30 @@
-{% extends "base.html" %} 
-{% block title %} Votar {% endblock%}
+{% extends "base.html" %} {% block title %} Votar {% endblock%} {% block content
+%}
 
-{% block content %}
-<form method="POST">
-    <h3 align="center">Entrar</h3>
-    <div class="form-group">
-        <label for="email">Email</label>
-        <input 
-        type="email" 
-        class="form-control" 
-        id="email" 
-        name="email" 
-        placeholder="Inserir Email"
-        />
-    </div>
-    <div class="form-group">
-        <label for="text">Nome</label>
-        <input 
-        type="text" 
-        class="form-control input-wrapper" 
-        id="firstName" 
-        name="firstName" 
-        placeholder="Inserir Nome"
-        />
-    </div>
-    <br>
-    <button type="submit" class="btn" id="button-entrar">Entrar</button>
+<form class="container-form" method="POST">
+  <h3 class="entrar-header" align="center">Entrar</h3>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input
+      type="email"
+      class="form-control"
+      id="email"
+      name="email"
+      placeholder="Inserir Email"
+    />
+  </div>
+  <div class="form-group">
+    <label for="text">Nome</label>
+    <input
+      type="text"
+      class="form-control input-wrapper"
+      id="firstName"
+      name="firstName"
+      placeholder="Inserir Nome"
+    />
+  </div>
+  <br />
+  <button type="submit" class="btn" id="button-entrar">Entrar</button>
 </form>
 {% endblock %}

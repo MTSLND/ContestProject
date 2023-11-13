@@ -1,0 +1,35 @@
+{% extends "base.html" %} {% block title %} Resultados {% endblock%} {% block
+content %}
+<h1 class="h1-votacao">Resultados da Votação</h1>
+<div class="flex-wrap row container-cards">
+  {% for grupo, contagem in contagem_por_grupo %}
+  <div class="p-2 card cards container-wrap-card">
+    <div class="card-body">
+      <h2 class="title-wrap">GRUPO {{ grupo }}</h2>
+      <p class="card-text" id="votos">VOTOS: {{ contagem }}</p>
+      <p class="card-text" id="porcentagem">
+        Porcentagem dos Votos: {{ '%.2f' % ((contagem/total_votos) * 100) }}%
+      </p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<footer class="container-footer">
+  <div class="container-p">
+    <h4>Desenvolvido Pelos Alunos</h4>
+    <p>
+      Matheus Dias Landim <br />
+      Jean Victor Rodrigues Pereira<br />
+      Pablo Henrique Gonçalves <br />
+      Artur Machado Dias <br />
+      Luan Cristian <br />
+      Vicente Henrique de Oliveira
+    </p>
+  </div>
+
+  <div class="icons">
+    <i class="bi bi-whatsapp"><a href=""></a></i>
+    <i class="bi bi-envelope"><a href=""></a></i>
+  </div>
+</footer>
+{% endblock %}

@@ -19,14 +19,14 @@ def login():
             flash('Email does not exits.', category='error')
 
     return render_template("login.html", user=current_user)
-"""
 
 @auth.route('/logout')
 @login_required
 def logout():
     logout_user()
     return redirect(url_for('auth.login'))
-
+    
+"""
 @auth.route('/sign-up', methods=['GET','POST'])
 def sign_up():
     if request.method == 'POST':
@@ -34,17 +34,17 @@ def sign_up():
         first_name = request.form.get('firstName')
         user = User.query.filter_by(email=email).first()
         if user:
-            flash('Email already exists', category='error')
+            flash('Email ja existe', category='error')
         elif len(email) < 4:
-            flash('Email must be greater than 3 characters', category='error')
+            flash('Email precisa ser maior que 3 caracteres', category='error')
         elif len(first_name) < 2:
-            flash('First Name must be greater than 1 characters', category='error')
+            flash('Nome precisa ser maior que 1 caractere', category='error')
         else:
             new_user = User(email=email, first_name=first_name)
             db.session.add(new_user)
             db.session.commit()
             login_user(new_user, remember=True)
-            flash('Account created!', category='success')
+            flash('Conta Criada!', category='success')
             return redirect(url_for('views.home'))
 
     return render_template("sign_up.html", user=current_user)
