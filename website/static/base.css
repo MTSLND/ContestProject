@@ -7,23 +7,48 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   box-sizing: border-box;
   text-decoration: none;
-  margin: 0;
+  padding: 0;
+
 }
 
-main{
-  margin-bottom: 10rem;
+.container-body{
+
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+
 }
 
-#container-header {
-  
-  background-color: rgba(238, 118, 6, 0.753);
-  border-color: rgb(255, 132, 0);
+.imagem-fundo {
+
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+
+}
+
+.container-header {
+
+  position: absolute;
+  background-color: rgb(238, 118, 6);
   display: flex;
   text-align: center;
   width: 100%;
   align-items: center;
   justify-content: center;
+  top: 0;
+  z-index: 1;
 
+}
+
+.mensagem-alerta{
+  margin-top: -30rem;
 }
 
 .entrar-header{
@@ -32,21 +57,51 @@ main{
 
 }
 
-.form-group{
 
-  color: white;
+#button-entrar {
+
+  background-color: rgb(238, 118, 6);
+  border-color: rgb(255, 255, 255);
+  border-width: 1px;
+  color: rgb(255, 255, 255);
+}
+
+main{
+
+  margin-bottom: 15rem;
+
+}
+
+.container-main{
+
+  position: absolute;
+  width: 90%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 
 .container-form{
 
-  background-color: rgba(238, 118, 6, 0.753);
+  position: relative;
+  background-color: rgb(238, 118, 6);
   border-style: solid;
   border-width: 0.15rem;
-  padding: 5rem;
   border-radius: 2rem;
   border-color: rgb(255, 255, 255);
-  margin-top: 10rem;
+  padding: 2rem;
+  margin-top: 15rem;
+  width: 50%;
+  height: 50%;
+
+  
+}
+
+.form-group{
+
+  color: white;
 
 }
 
@@ -54,6 +109,7 @@ main{
 
   color: white;
 
+  
 }
 
 .home{
@@ -62,97 +118,67 @@ main{
 
 }
 
+#container-home{
 
-.h2-votacao {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 4rem;
-  z-index: 1000;
-  padding: 1rem 0;
+  width: auto;
+  height: auto;
+
+
+}
+
+.form{
+
+  width: auto;
+  height: auto;
+
 }
 
 
-.container-section2{
+.h1-votacao {
+
+  left: 0;
+  width: 100%;
+  color: white;
+  padding: 1rem;
+  margin-top: 15rem;
+
+}
+
+.container-section1{
  
   display: flex;
   color: white;
   justify-content: center;
   align-items: center;
-  padding: 5rem;
-  margin-top: 30rem;
-  gap: 10rem;
-
-}
-
-.container-section3{
-
-  display: flex;
-  color: white;
-  margin-top: 10rem;
-  justify-content: center;
-  align-items: center;
-  gap: 10rem;
+  padding: 2rem;
+  gap: 5rem;
+  margin-top: 3rem;
 
 }
 
 #container-enviar{
+  
   font-size: 1.5rem;
   width: 15rem;
   height: 4rem;
-  background-color: rgba(238, 118, 6, 0.418);
-  display: block;
-  margin-top: 5rem;
+  background-color: rgb(238, 118, 6);
   border-color: rgb(255, 132, 0);
+  border-radius: 0.5rem ;
 
-}
-
-#button-entrar {
-  background-color: rgba(238, 118, 6, 0.651);
-  border-color: rgb(255, 255, 255);
-  border-width: 1px;
-  color: rgb(255, 255, 255);
-}
-
-
-#container-grupos{
-  
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
 
 }
 
  .card{
 
   display: flex;
-  background-color: rgba(238, 118, 6, 0.418);
+  background-color: rgb(238, 118, 6);
   justify-content: center;
   text-align: center;
   align-items: center;
-  margin-top: -10rem;
-  border-top-right-radius: 5rem;
-  border-bottom-left-radius: 5rem;
+  border-radius: 0.5rem;
   width:15rem;
   height: 10rem;
   border-color: rgb(255, 132, 0);
-
-}
-
-body {
-
-  background-image: url(./img/Captura\ de\ tela\ 2023-11-11\ 191337.png);
-  background-position: absolute;
-  background-size: cover; 
-  background-repeat: no-repeat;
 
 }
 
@@ -173,28 +199,19 @@ body {
     margin-right: 2.5rem;
     margin-left: 2.5rem;
     color: white;
+    overflow: hidden;
 
 }
 
 .card-text{
+
   font-size: medium;
+
 }
 
 .card-body{
 
     padding: 0, 2rem,0 ,2rem;
-
-}
-
-.cards{
-
-    display: flex;
-    color: white;
-    justify-content: center;
-    align-items: center;
-    padding: 5rem;
-    margin-top: 15rem;
-    gap: 10rem;
 
 }
 
@@ -223,23 +240,38 @@ display: flex;
 
 }
 
+.container-resultado{
+
+  height: auto;
+  width: auto;
+
+}
+
+.h1-resultado-votacao{
+
+  height: auto;
+  width: auto;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 25rem;
+
+}
+
 .container-footer {
 
-  background-color: rgba(238, 118, 6, 0.418);
-  border-radius: 1rem;
-  margin-top: 5rem;
+  
+  background-color: rgb(238, 118, 6);
+  border-radius: 0.5rem;
   padding: 1rem;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-
-}
-
-.container-footer .container-p {
-
-  gap: 20rem;
-
+  overflow: hidden;
+  margin-top: 8rem;
 
 }
 
@@ -247,109 +279,13 @@ display: flex;
 
   display: flex;
   flex-direction: column;
-  padding: 1.2rem;
+  padding: 1rem;
   font-size: 1.5rem;
   cursor: pointer;
 
 }
 
 
-@media (max-width:1220px) {
-
-  body{
-
-    background-size: cover;
-    background-position: absolute;
-    height: 62rem;
-    width: 100%;
-
-  }
-  .container-footer{
-
-    margin-top: 13.1rem;
-
-  }
-
-}
-
-@media (max-width:380px) {
-
-  body{
-
-    height: 60rem;
-
-  }
-
-  .container-footer{
-
-    margin-top: 10rem;
-
-  }
-
-}
-
-
-@media (max-width:322px) {
-
-  body{
-
-    height: 60rem;
-
-  }
-
-  .container-footer{
-
-    margin-top: 10rem;
-
-  }
-
-}
-@media (max-width:320px) {
-
-  body{
-
-    height: 55rem;
-
-  }
-
-  .container-footer{
-
-    margin-top: 3.5rem;
-
-  }
-
-}
-@media (max-width:300px) {
-
-  body{
-
-    height: 55rem;
-
-  }
-
-  .container-footer{
-
-    margin-top: 3rem;
-
-  }
-
-}
-
-@media (max-width:299px) {
-
-  body{
-
-    height: 63rem;
-
-  }
-
-  .container-footer{
-
-    margin-top: 10rem;
-
-  }
-
-}
 
 @media (max-width: 576px) {
   .container-section2,
@@ -363,5 +299,218 @@ display: flex;
   .container-section2 .form-check,
   .container-section3 .form-check {
       margin-top: 1rem;
+
   }
+}
+
+@media (max-width: 1284px) {
+
+  .h1-votacao{
+
+    font-size: 1.3rem;
+    margin-top: 15rem;
+    padding: 1rem;
+
+  }
+
+  .container-section1{
+
+    padding: 2rem;
+    gap: 1rem;
+    margin-top: -1rem;
+
+  }
+
+  .card{
+
+    height: 8rem;
+    width: 8rem;
+
+  }
+
+  .card h3{
+
+    font-size: 1rem;
+
+  }
+  #container-enviar{
+
+    height: 2.2rem;
+    width: 8rem;
+    font-size: 1rem;
+    border-radius: 0.5rem ;
+
+  }
+
+}
+
+@media (max-width: 1006px) {
+
+  .h1-votacao{
+    font-size: 1.8rem;
+  }
+ 
+  .container-section1{
+
+    padding: 2rem;
+    margin-top: 1rem;
+    gap: 2rem;
+
+  }
+
+
+}
+
+@media (max-width: 552px) {
+
+  .container-section1{
+
+    padding: 1rem;
+    margin-top: 0.5rem;
+    gap: 1rem;
+
+  }
+
+  .card{
+
+    height: 8rem;
+    width: 10rem;
+
+  }
+
+  #container-enviar{
+
+    height: 4rem;
+    width: 10rem;
+
+  }
+
+}
+
+@media (max-width: 420px) {
+
+
+  .form{
+
+    margin-top: 19rem;
+
+  }
+
+  .h1-votacao{
+
+    font-size: 1.7rem;
+    margin-top: 50rem;
+
+  }
+  .container-section1{
+
+    margin-top: 0.2rem;
+
+
+  }
+
+  .card{
+
+    height: 7rem;
+    width: 8rem;
+    font-size: 1.5rem;
+
+  }
+
+  .card h3{
+
+    font-size: 1.4rem;
+
+  }
+  #container-enviar{
+
+    height: 3rem;
+    width: 9rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem ;
+
+  }
+
+}
+
+@media (max-width: 420px) {
+
+  .h1-votacao{
+
+    font-size: 1.4rem;
+    margin-top: -5rem;
+
+  }
+
+
+  .card{
+
+    height: 7rem;
+    width: 8rem;
+
+
+  }
+
+  .card h3{
+
+    font-size: 1.2rem;
+
+  }
+  #container-enviar{
+
+    height: 2.5rem;
+    width: 9rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem ;
+
+  }
+
+}
+
+@media (max-width: 280px) {
+
+  .h1-votacao{
+
+    font-size: 1.3rem;
+    margin-top: -5rem;
+
+  }
+
+
+  .card{
+
+    height: 5rem;
+    width: 5rem;
+
+
+  }
+
+  .card h3{
+
+    font-size: 1rem;
+
+  }
+  #container-enviar{
+
+    height: 2.2rem;
+    width: 8rem;
+    font-size: 1rem;
+    border-radius: 0.5rem ;
+
+  }
+
+}
+
+.container-main {
+  margin-bottom: 3rem; /* ou ajuste conforme necessário */
+}
+
+.container-cards {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container-resultado {
+  max-width: 1200px; /* ou ajuste conforme necessário */
+  margin: 0 auto; /* centraliza o container na tela */
 }
