@@ -19,9 +19,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-
-
 }
 
 .imagem-fundo {
@@ -215,6 +212,18 @@ main{
 
 }
 
+.cards{
+
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    margin-top: 15rem;
+    gap: 10rem;
+
+}
+
 .card-text{
 
   margin: 0;
@@ -275,15 +284,6 @@ display: flex;
 
 }
 
-.icons{
-
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  font-size: 1.5rem;
-  cursor: pointer;
-
-}
 
 
 
@@ -307,7 +307,7 @@ display: flex;
 
   .h1-votacao{
 
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     margin-top: 15rem;
     padding: 1rem;
 
@@ -353,8 +353,14 @@ display: flex;
   .container-section1{
 
     padding: 2rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     gap: 2rem;
+
+  }
+
+  .card{
+
+    margin-top: 1rem;
 
   }
 
@@ -501,16 +507,322 @@ display: flex;
 
 }
 
-.container-main {
-  margin-bottom: 3rem; /* ou ajuste conforme necessário */
+@media (max-width: 1388px) {
+
+  .h1-resultado-votacao{
+
+    margin-top: 22rem;
+
+  }
+
+  #cards-resultados1{
+
+    height: 9rem;
+    width: 12rem;
+
+  }
+
+  .card-body h3{
+
+    font-size: 1rem;
+
+  }
+
+  .card-body p{
+
+    font-size: 0.8rem;
+
+  }
+
+
+  .container-footer{
+
+    margin-top: 9rem;
+
+  }
+
+
+
 }
 
-.container-cards {
-  flex-wrap: wrap;
-  justify-content: center;
+@media (max-width: 1284px) {
+
+  .h1-resultado-votacao{
+
+    margin-top: 25rem;
+
+  }
+
+  .card-body h3{
+
+    font-size: 1rem;
+
+  }
+
+  .card-body p{
+
+    font-size: 0.5rem;
+
+  }
+
+  .container-footer{
+
+    margin-top: 10rem;
+
+  }
+
 }
 
-.container-resultado {
-  max-width: 1200px; /* ou ajuste conforme necessário */
-  margin: 0 auto; /* centraliza o container na tela */
+@media (max-width: 1175px) {
+
+  .h1-resultado-votacao{
+
+    margin-top: 20rem;
+
+  }
+
+  .container-footer{
+
+    margin-top: 1rem;
+
+  }
+
 }
+
+
+@media (max-width: 1006px) {
+
+  .h1-resultado-votacao{
+
+    margin-top: 25rem;
+
+  }
+
+  .container-footer{
+
+    margin-top: 5rem;
+
+  }
+
+}
+
+@media (max-width: 891px) {
+
+  .h1-resultado-votacao{
+
+    margin-top: 22rem;
+    padding: 2rem;
+
+  }
+
+  .container-footer{
+
+    margin-top: 8rem;
+
+  }
+
+}
+
+
+@media (max-width: 891px) {
+
+  .h1-resultado-votacao{
+
+    margin-top: 22rem;
+    padding: 2rem;
+
+  }
+
+  .container-footer{
+
+    margin-top: 8rem;
+
+  }
+
+}
+
+
+@media (max-width: 570px) {
+
+  .h1-resultado-votacao{
+
+    margin-top: 17rem;
+
+  }
+
+  .h1-resultado-votacao h1{
+
+    font-size: 1.5rem;
+
+  }
+
+  #cards-resultados1{
+
+    height: 8rem;
+    width: 8rem;
+
+  }
+
+  .container-footer{
+
+    margin-top: 10rem;
+    height: auto;
+
+  }
+
+  .container-p h1{
+
+    font-size: 0.9rem ;
+
+  }
+  
+  .container-p p{
+
+    font-size: 0.5rem ;
+
+  }
+
+}
+
+
+@media (max-width: 444px) {
+
+  .h1-resultado-votacao{
+
+    margin-top: 15rem;
+
+  }
+
+  .container-footer{
+
+  margin-top: 1rem;
+
+  }
+
+  #cards-resultados1{
+
+    height: auto;
+    width: auto;
+
+  }
+
+}
+
+
+
+@media (max-height: 840px) {
+  
+  .h1-resultado-votacao {
+
+    margin-top: 18rem;
+
+  }
+
+  .h1-resultado-votacao h1{
+
+    font-size: 1rem;
+
+  }
+
+  .card-body h3{
+
+    font-size: 0.6rem;
+    margin-top: -1.5rem;
+
+  }
+
+  .card-body p{
+
+    font-size: 0.5rem;
+
+
+  }
+
+  #cards-resultados1{
+
+    height: 4rem;
+    width: 9rem;
+
+  }
+
+  .container-footer{
+
+    margin-top: 2rem;
+  
+  }
+
+}
+
+
+@media (max-height: 643px) {
+  
+  .h1-resultado-votacao {
+
+    margin-top: 19rem;
+
+  }
+
+
+  .container-p h4{
+ 
+    font-size: 1rem;
+
+  }
+
+  .container-p p{
+
+    font-size: 0.5rem;
+    
+  }
+}
+
+
+@media (max-height: 565px) {
+  
+  .h1-resultado-votacao {
+
+    margin-top: 19rem;
+
+  }
+
+
+  .card-body h3{
+
+    font-size: 0.5rem;
+    margin-top: -1.5rem;
+
+  }
+
+  .card-body p{
+
+    font-size: 0.3rem;
+
+
+  }
+  .container-p h4{
+ 
+    font-size: 1rem;
+
+  }
+
+  .container-p p{
+
+    font-size: 0.5rem;
+    
+
+  }
+
+  #cards-resultados1{
+
+    height: 3rem;
+    width: 9rem;
+
+  }
+  .container-footer{
+
+    margin-top: 1rem;
+  
+  }
+
+}
+

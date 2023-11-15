@@ -9,9 +9,9 @@ content %}
 
   </div>
 
-<div class="flex-wrap row container-cards">
+<div class="flex-wrap row container-cards" id="cards-resultados">
   {% for grupo, contagem in contagem_por_grupo %}
-  <div class="p-2 card container-wrap-card">
+  <div class="p-2 card container-wrap-card" id="cards-resultados1">
     <div class="card-body">
       <h3 class="title-wrap">GRUPO {{ grupo }}</h3>
       <p class="card-text" id="votos">VOTOS: {{ contagem }}</p>
@@ -27,19 +27,17 @@ content %}
   <div class="container-p">
     <h4>Desenvolvido Pelos Alunos</h4>
     <p>
-      Matheus Dias Landim <br />
+      Matheus Dias Landim , 
       Jean Victor Rodrigues Pereira<br />
-      Vicente Henrique de Oliveira <br />
-      Pablo Henrique Gonçalves <br />
-      Artur Machado Dias <br />
+      Vicente Henrique de Oliveira ,
+      Pablo Henrique Gonçalves<br />
+      Artur Machado Dias, 
       Luan Cristian
     </p>
   </div>
-
-  <div class="icons">
-    <i class="bi bi-envelope"><a href=""></a></i>
-  </div>
 </footer>
+
+
 </div>
 
 {% endblock %}
