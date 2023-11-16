@@ -44,8 +44,20 @@
 
 }
 
-.mensagem-alerta{
-  margin-top: -30rem;
+.mensagem-alerta {
+  position: absolute;
+  width: 100%;
+  top: 80px; 
+  display: flex;
+  justify-content: center;
+}
+
+.alert {
+  width: 80%; 
+}
+
+.hide-message {
+  display: none;
 }
 
 .entrar-header{
@@ -844,7 +856,6 @@ display: flex;
   #button-entrar{
  
     width: 4rem;
-    margin-top: -2rem;
 
   }
 
