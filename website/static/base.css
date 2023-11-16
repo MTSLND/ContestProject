@@ -61,6 +61,7 @@
   border-color: rgb(255, 255, 255);
   border-width: 1px;
   color: rgb(255, 255, 255);
+
 }
 
 main{
@@ -826,3 +827,65 @@ display: flex;
 
 }
 
+@media (max-height:907px ) {
+  
+  .container-form{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    width: 18rem;
+    height: 20rem;
+
+
+  }
+
+  #button-entrar{
+ 
+    width: 4rem;
+    margin-top: -2rem;
+
+  }
+
+}
+
+
+@media (max-height:644px ) {
+  
+ 
+
+  #button-entrar{
+ 
+    margin-top: 1rem;
+
+  }
+
+  .entrar-header{
+
+    font-size: 1.3rem;
+
+  }
+
+  .form-group {
+
+    font-size: 1rem;
+
+  }
+
+  .form-group{
+
+    width: 9rem;
+
+  }
+}
+
+@media (max-height:644px ) {
+  
+ 
+  .container-form{
+
+    margin-top: 18rem;
+
+  }
+}
