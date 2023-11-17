@@ -1,8 +1,8 @@
 from flask import Blueprint, render_template, flash, redirect, request, url_for
 from .models import User
-from werkzeug.security import generate_password_hash, check_password_hash
 from . import db
 from flask_login import login_user, login_required, logout_user, current_user
+from validate_email import validate_email
 
 auth = Blueprint('auth', __name__)
 
@@ -18,6 +18,8 @@ def sign_up():
             flash('Email precisa ser maior que 3 caracteres', category='error')
         elif len(first_name) < 2:
             flash('Nome precisa ser maior que 1 caractere', category='error')
+        elif validate_email(email) == False:
+            flash('Email Invalido', category='error')
         else:
             new_user = User(email=email, first_name=first_name)
             db.session.add(new_user)
