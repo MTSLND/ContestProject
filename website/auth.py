@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, flash, redirect, request, url_for
 from .models import User
 from . import db
-from flask_login import login_user, login_required, logout_user, current_user
+from flask_login import login_user, current_user
 from validate_email import validate_email
 
 auth = Blueprint('auth', __name__)
