@@ -29,5 +29,3 @@ O código implementado neste projeto realiza a verificação de votos com base n
     
 - **Pablo Gonçalves**
   - GitHub: [VoidUltron](https://github.com/VoidUltron)
-    
-Agradecemos a colaboração de todos os contribuidores neste projeto! Se você tiver sugestões ou melhorias, sinta-se à vontade para abrir problemas ou enviar pull requests.
