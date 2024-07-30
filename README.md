@@ -13,7 +13,7 @@ O código implementado neste projeto realiza a verificação de votos com base n
 ## Desenvolvido Por:
 
 - **Matheus Landim**
-  - GitHub: [W1ndowsX](https://github.com/W1ndowsX)
+  - GitHub: [MTSLND](https://github.com/MTSLND)
 
 - **Jean Rodrigues**
   - GitHub: [JeanVRP](https://github.com/JeanVRP)
