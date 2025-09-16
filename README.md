@@ -15,9 +15,6 @@ O código implementado neste projeto realiza a verificação de votos com base n
 - **Matheus Landim**
   - GitHub: [MTSLND](https://github.com/MTSLND)
 
-- **Jean Rodrigues**
-  - GitHub: [JeanVRP](https://github.com/JeanVRP)
-
 - **Vicente Henrique**
   - GitHub: [offvicente](https://github.com/offvicente)
     
@@ -29,3 +26,4 @@ O código implementado neste projeto realiza a verificação de votos com base n
     
 - **Pablo Gonçalves**
   - GitHub: [VoidUltron](https://github.com/VoidUltron)
+
